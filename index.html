@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora de precios F&F</h1>
+
+    <div class="container">
+        <div class="container-input">
+            <div class="input">
+                <input type="text" placeholder="Producto" id="producto">
+                <input type="number" placeholder="Peso en Kg" id="peso">
+                <input type="number" placeholder="Costo Mercaderia" id="costo">
+            </div>
+
+            <div class="percent">
+                <select name="porcentaje" id="porcentaje">
+                    <option value="30" >30%</option>
+                    <option value="40" >40%</option>
+                    <option value="50" >50%</option>
+                    <option value="60" selected>60%</option>
+                    <option value="70" >70%</option>
+                    <option value="80" >80%</option>
+                </select>
+            </div>
+        </div>
+        <div class="container-result">
+            <div class="divCosto">
+                <h2>Costo:</h2>
+                <h3 id="resultadoCosto"></h3>
+            </div>
+            <div class="divVenta">
+                <h2>Venta:</h2>
+                <h3 id="resultadoVenta"></h3>
+            </div>
+            <div class="divPromo">
+                <h2>Promo 2Kg:</h2>
+                <h3 id="resultadoPromo"></h3>
+            </div>
+        </div>
+    </div>
+    
+    <div class="boton">
+        <button onclick="calcularMultiplicacion()">Calcular</button>
+        <button onclick="limpiarResultado()">Borrar</button>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
