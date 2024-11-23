@@ -75,3 +75,49 @@ h1 {
     background-color: rgb(255, 208, 106);
     border: none;
 }
+
+/*Parte mobile*/
+
+@media screen and (max-width: 640px) { 
+
+    body{
+        height: 99vh;
+    }
+    .container{
+        background-color: #cfcfcf;
+        margin: 40px auto;
+        width: 100%;
+        height: 50vh;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-input{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        background-color: #515151;
+        padding-left: 60px;
+    }
+
+    .container-result{
+        padding: 20px 0;
+        height: 50vh;
+    }
+
+    .container-result h2{
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .container-result h3{
+        text-align: center;
+        font-size: 1em;
+        margin: 5px 0;
+    }
+}
