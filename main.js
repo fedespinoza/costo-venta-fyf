@@ -12,14 +12,14 @@ function calcularMultiplicacion() {
     // Verificar que el valor ingresado sea un número
     const numeroPeso = parseFloat(peso);
     if (isNaN(numeroPeso)) {
-        document.getElementById("resultadoCosto").innerText = "Por favor, ingresa en el campo del peso un número válido.";
+        document.getElementById("resultadoCosto").innerText = "Ingresa el peso correctamente.";
         return;
     }
 
     // Verificar que el valor ingresado sea un número
     const numeroCosto = parseFloat(costo);
     if (isNaN(numeroCosto)) {
-        document.getElementById("resultadoCosto").innerText = "Por favor, ingresa en el campo del costo un número válido.";
+        document.getElementById("resultadoCosto").innerText = "Ingresa la venta correctamente.";
         return;
     }
 
@@ -35,9 +35,9 @@ function calcularMultiplicacion() {
     document.getElementById("resultadoCosto").innerText = `Costo ${producto}: $${resultado}`;
     document.getElementById("resultadoVenta").innerText = `Venta ${producto}: $${venta}`;
     document.getElementById("resultadoPromo").innerText = `Promo 2Kg ${producto}: $${promo}`;
-    resultadoCosto.style.color = "blue";
-    resultadoVenta.style.color = "blue";
-    resultadoPromo.style.color = "blue";
+    resultadoCosto.style.color = "#f20a6b";
+    resultadoVenta.style.color = "#f20a6b";
+    resultadoPromo.style.color = "#f20a6b";
 }
 
 // Función para limpiar el campo de entrada y el resultado

@@ -76,12 +76,41 @@ h1 {
     border: none;
 }
 
+
+/* Estilo base para el input */
+.custom-input {
+    background-color: #ffe4e1; /* Rosado suave */
+    border: 1px solid #ffb6c1; /* Bordes rosados */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado interno */
+    font-size: 10px; /* Tamaño de fuente */
+    outline: none; /* Eliminar el borde azul predeterminado */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Transiciones suaves */
+    margin: 10px 0;
+  }
+  
+  /* Cambiar el color del placeholder */
+  .custom-input::placeholder {
+    color: #ff69b4; /* Otro tono de rosado */
+    font-style: italic; /* Opcional: estilo cursiva */
+  }
+  
+  /* Cambiar el color al hacer focus */
+  .custom-input:focus {
+    background-color: #ffd6d1; /* Color levemente más claro */
+    border-color: #ff7f9e; /* Borde más oscuro */
+  }
+
 /*Parte mobile*/
 
 @media screen and (max-width: 640px) { 
 
     body{
         height: 99vh;
+    }
+
+    h1{
+        font-size: 1.7em;
     }
     .container{
         background-color: #cfcfcf;
@@ -103,6 +132,11 @@ h1 {
         align-items: center;
         background-color: #515151;
         padding-left: 60px;
+    }
+
+    .percent{
+        justify-content: center;
+        align-items: center;
     }
 
     .container-result{
