@@ -131,17 +131,20 @@ h1 {
         justify-content:space-around;
         align-items: center;
         background-color: #515151;
-        padding-left: 60px;
+        padding-left: 0px;
     }
 
     .input{
         height: 100%;
+        width: 50%;
         justify-content: center;
+        align-items: center;
     }
 
     .percent{
         justify-content: center;
         align-items: center;
+        width: 50%;
     }
 
     .container-result{
