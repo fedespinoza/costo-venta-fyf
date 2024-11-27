@@ -29,23 +29,55 @@ function calcularMultiplicacion() {
 
     const venta = ((porcentajeSumado * resultado) / 100).toFixed(2); 
     const promo = ((resultado * 1.4)*2).toFixed(2); 
+    const gananciaCajon = ((venta * peso) - (resultado * peso)).toFixed(2);
+    const gananciaDosCajon = ((promo * (peso / 2)) - (resultado * peso)).toFixed(2);
     
 
     // Mostrar el resultado en el <h3>
     document.getElementById("resultadoCosto").innerText = `Costo ${producto}: $${resultado}`;
     document.getElementById("resultadoVenta").innerText = `Venta ${producto}: $${venta}`;
     document.getElementById("resultadoPromo").innerText = `Promo 2Kg ${producto}: $${promo}`;
+    document.getElementById("gananciaXCajon").innerText = `Ganancia x Kg x Cajon $${gananciaCajon} \n Ganancia x 2Kg x Cajon $${gananciaDosCajon}`;
     resultadoCosto.style.color = "#f20a6b";
     resultadoVenta.style.color = "#f20a6b";
     resultadoPromo.style.color = "#f20a6b";
+    gananciaXCajon.style.color = "#f20a6b";
+
+/*
+// Evento change para el select
+procuto.addEventListener('change', function() {
+    console.log("Hizo click?")
+    // Comprobamos qué producto fue seleccionado y asignamos el valor correspondiente al input
+    switch (producto.value) {
+      case 'Acelga':
+        peso.value = 10;  // Producto 1
+        
+        break;
+      case 'producto2':
+        peso.value = 20;  // Producto 2
+        break;
+      case 'producto3':
+        peso.value = 30;  // Producto 3 (puedes ajustar el valor según lo que necesites)
+        break;
+      default:
+        peso.value = '';  // Si no hay selección, vaciar el input
+        break;
+    }
+  });
+
+    */
 }
+
+
 
 // Función para limpiar el campo de entrada y el resultado
 function limpiarResultado() {
     document.getElementById("peso").value = "";
     document.getElementById("costo").value = "";
-    document.getElementById("producto").value = "";
+    document.getElementById("producto").value = "Seleccionar producto";
+    document.getElementById("porcentaje").value = "60";
     document.getElementById("resultadoCosto").innerText = "";
     document.getElementById("resultadoVenta").innerText = "";
     document.getElementById("resultadoPromo").innerText = "";
+    document.getElementById("gananciaXCajon").innerText = "";
 }
